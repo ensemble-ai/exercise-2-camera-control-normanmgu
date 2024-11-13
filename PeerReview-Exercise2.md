@@ -88,7 +88,7 @@ ___
 ___
 #### Justification ##### 
 The camera trails behind the players based on the follow_speed, and it also works during hyperspeed. 
-Exported variables like catchup_speed and leash_distance work as described based on my testing. The only problem I notice is that the movement is jittery, but that isn't listed as a requirement for Stage 3.
+Exported variables like catchup_speed and leash_distance work as described based on my testing. The only problem I notice is that the movement is jittery, but that isn't listed as a requirement for Stage 3. And more to do with the Vessell script from what i have heard.
 
 ___
 ### Stage 4 ###
@@ -116,6 +116,8 @@ ___
 #### Justification ##### 
 The player can push the box in the direction they're moving, at both normal and hyper-speed when it touches the edges and corners. But the push_ratio is not implemented, so it's not accounted for in the movement calculation. 
 
+https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/camera_controllers/push_box.gd#L14-L42
+
 Another problem is the Speed-up Zone and the Push Zone are not distinguished. In the Push Zone(not touching the corners), the camera doesn't follow the player and simply acts the same as the Speed-up Zone. The student also didn't export any of the required variables.
 
 I mark this as "good" because there are 2 major flaws, a lack of zone distinction and push_ratio not being implemented. And some minor flaws like no exported variables. 
@@ -132,8 +134,8 @@ None.
 
 #### Style Guide Exemplars ####
 
-There are many descriptive and helpful comments for the code. For example, it's full of them for the [Stage 3 script](https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_smoothing_camera.gd#L15)
-
+There are many descriptive and helpful comments for the code. For example, it's full of them for the Stage 3 script
+https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_smoothing_camera.gd#L15-L42
 
 # Best Practices #
 
@@ -142,9 +144,11 @@ The code adheres to the best practices and the coding convention of GDScript. I 
 
 #### Best Practices Infractions ####
 
-One minor [indentaion](https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_target_smoothing_camera.gd#L35) mistake for a comment.
+One minor indentaion mistake for a comment.
+https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_target_smoothing_camera.gd#L35-L36
 
 #### Best Practices Exemplars ####
 
-[The code is very well structured](https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_target_smoothing_camera.gd#L21) It make it self-explanatory even without the comments.
+The code is very well-structured, it make it self-explanatory even without the comments.
+https://github.com/ensemble-ai/exercise-2-camera-control-normanmgu/blob/a16b9633fcff8e869393dfc3037ab8f0d120f4b0/Obscura/scripts/lerp_target_smoothing_camera.gd#L21-L54
 
